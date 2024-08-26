@@ -1,9 +1,9 @@
-import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
-import ProjectCard from '../../common/ProjectCard';
+import styles from "./ProjectsStyles.module.css";
+import weather from "../../assets/weather.webp";
+import freshBurger from "../../assets/fresh-burger.png";
+import hipsster from "../../assets/hipsster.png";
+import fitLift from "../../assets/fitlift.png";
+import ProjectCard from "../../common/ProjectCard";
 
 function Projects() {
   return (
@@ -11,11 +11,13 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={viberr}
-          link="https://github.com/Pritanjan/Pritanjan_Portfolio"
-          h3="Viberr"
-          p="Streaming App"
+          src={weather}
+          link="https://auraforecast.netlify.app/"
+          h3="weather"
+          github="https://github.com/Pritanjan/Weather/tree/main"
+          p="Aura Forecast"
         />
+
         <ProjectCard
           src={freshBurger}
           link="https://github.com/Pritanjan/"
