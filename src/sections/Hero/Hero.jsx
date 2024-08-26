@@ -38,7 +38,7 @@ function Hero() {
         <h1>
           Pritanjan
           <br />
-          Johnsen
+          Baranwal
         </h1>
         <h2>Frontend Developer</h2>
         <span>
