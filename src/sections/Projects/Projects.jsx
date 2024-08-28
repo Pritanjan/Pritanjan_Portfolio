@@ -1,7 +1,8 @@
 import styles from "./ProjectsStyles.module.css";
-import weather from "../../assets/weather.webp";
-import freshBurger from "../../assets/fresh-burger.png";
+import weather from "../../assets/weather-transformed.webp";
+import socialSphere from "../../assets/socialSphere1.png";
 import hipsster from "../../assets/hipsster.png";
+import TicTacToe from "../../assets/Tic-Tac-Toe.png";
 import fitLift from "../../assets/fitlift.png";
 import ProjectCard from "../../common/ProjectCard";
 
@@ -13,23 +14,28 @@ function Projects() {
         <ProjectCard
           src={weather}
           link="https://auraforecast.netlify.app/"
-          h3="weather"
+          h3="Aura Forecast"
+          h4="HTML, CSS, JS"
           github="https://github.com/Pritanjan/Weather/tree/main"
-          p="Aura Forecast"
+          p="Weather App"
         />
 
         <ProjectCard
-          src={freshBurger}
-          link="https://github.com/Pritanjan/"
-          h3="Fresh Burger"
-          p="Hamburger Restaurant"
+          src={socialSphere}
+          link="https://socialsphere-project.onrender.com/login"
+          h3="Social Sphere"
+          h4="ReactJS , MongoDB, ExpressJS, NodeJS , PostMan , TailWind CSS"
+          p="Social Media App"
         />
+
         <ProjectCard
-          src={hipsster}
+          src={TicTacToe}
           link="https://github.com/Pritanjan/Pritanjan_Portfolio"
-          h3="Hipsster"
-          p="Glasses Shop"
+          h3="Tic-Tac-Toe"
+          h4="HTML, CSS, JS"
+          p="Game"
         />
+
         <ProjectCard
           src={fitLift}
           link="https://github.com/Pritanjan/Pritanjan_Portfolio"
