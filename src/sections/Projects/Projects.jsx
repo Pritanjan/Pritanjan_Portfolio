@@ -1,7 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import weather from "../../assets/weather-transformed.webp";
 import socialSphere from "../../assets/socialSphere1.png";
-import hipsster from "../../assets/hipsster.png";
+import freshy from "../../assets/Freshylogo.png";
 import TicTacToe from "../../assets/Tic-Tac-Toe.png";
 import fitLift from "../../assets/fitlift.png";
 import ProjectCard from "../../common/ProjectCard";
@@ -11,6 +11,14 @@ function Projects() {
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
+        <ProjectCard
+          src={freshy}
+          link="https://freshy-knit.netlify.app/"
+          githubLink="https://github.com/Pritanjan/Freshy"
+          h3="Freshy"
+          h4="HTML, CSS, JS"
+          p="FRESHY"
+        />
         <ProjectCard
           src={weather}
           link="https://auraforecast.netlify.app/"
