@@ -1,0 +1,198 @@
+.educationSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+    gap: 20px;
+
+    h1 {
+        font-size: 28px;
+        font-weight: 800;
+        margin: 40px 0 30px;
+        letter-spacing: 1px;
+        position: relative;
+        display: inline-block;
+        align-self: center;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent-color), transparent);
+        border-radius: 2px;
+    }
+}
+
+.educationItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    background: rgba(9, 135, 242, 0.05);
+    border: 1px solid rgba(9, 135, 242, 0.2);
+    transition: var(--transition);
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(9, 135, 242, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+
+    &:nth-child(2) { animation-delay: 0.1s; }
+    &:nth-child(3) { animation-delay: 0.2s; }
+    &:nth-child(4) { animation-delay: 0.3s; }
+    &:nth-child(5) { animation-delay: 0.4s; }
+    &:nth-child(6) { animation-delay: 0.5s; }
+    &:nth-child(7) { animation-delay: 0.1s; }
+    &:nth-child(8) { animation-delay: 0.2s; }
+
+    &:hover {
+        transform: translateY(-8px);
+        background: rgba(9, 135, 242, 0.1);
+        border-color: rgba(9, 135, 242, 0.4);
+        box-shadow: 0 8px 24px rgba(9, 135, 242, 0.15);
+
+        &::before {
+            left: 100%;
+        }
+
+        h3 {
+            color: var(--accent-color);
+        }
+
+        p:first-of-type {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 700;
+        color: var(--text-color);
+        transition: var(--transition);
+        letter-spacing: 0.5px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0;
+        color: var(--text-secondary);
+        transition: var(--transition);
+        font-weight: 500;
+
+        &:first-of-type {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        &:last-of-type {
+            line-height: 1.5;
+            max-width: 40ch;
+        }
+    }
+}
+
+.educationList {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    max-width: 40ch;
+}
+
+hr {
+    width: 100%;
+    max-width: 150px;
+    height: 2px;
+    border: none;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    margin: 50px auto;
+    opacity: 0.5;
+}
+
+@media (width >= 600px) {
+    .educationItem {
+        padding: 30px 25px;
+        gap: 15px;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .educationSection h1 {
+        font-size: 32px;
+    }
+}
+
+@media (width >= 800px) {
+    .educationList {
+        max-width: fit-content;
+        gap: 30px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    hr {
+        width: 300px;
+    }
+
+    .educationItem {
+        padding: 35px 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .educationSection h1 {
+        font-size: 36px;
+        margin: 50px 0 40px;
+    }
+}
+
+@media (width >= 1200px) {
+    .educationSection h1 {
+        font-size: 40px;
+    }
+
+    .educationItem {
+        padding: 40px 35px;
+        max-width: 500px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}

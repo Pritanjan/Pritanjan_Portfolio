@@ -1,7 +1,44 @@
 .container {
   text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid rgba(9, 135, 242, 0.2);
+  background: linear-gradient(180deg, transparent, rgba(9, 135, 242, 0.05));
+  animation: slideInUp 0.8s ease-out;
+
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--footer-text-color);
+    font-weight: 500;
+    line-height: 1.8;
+    transition: var(--transition);
+    margin: 0;
+
+    &:hover {
+      color: var(--text-secondary);
+    }
+
+    br {
+      margin: 8px 0;
+    }
+  }
+}
+
+@media (width >= 600px) {
+  .container {
+    padding: 50px 30px;
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (width >= 800px) {
+  .container {
+    padding: 60px 40px;
+
+    p {
+      font-size: 16px;
+    }
   }
 }

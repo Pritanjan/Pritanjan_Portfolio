@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(9, 135, 242, 0.12);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.navLinks a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.navLinks a:hover {
+  color: var(--accent-color);
+}
+
+.themeButton {
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(9, 135, 242, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.themeButton img {
+  width: 22px;
+  height: 22px;
+}
+
+.themeButton:hover {
+  transform: translateY(-2px);
+  background: rgba(9, 135, 242, 0.24);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 12px 18px;
+    gap: 12px;
+  }
+
+  .navLinks {
+    gap: 14px;
+  }
+
+  .navLinks a {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .themeButton {
+    width: 42px;
+    height: 42px;
+  }
+}

@@ -2,78 +2,182 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+  gap: 30px;
+
+  div {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+
+  label {
+    display: none;
+  }
+
+  input,
+  textarea {
+    animation: fadeInUp 0.6s ease-out backwards;
+  }
 }
 
 textarea,
 input:not([type='submit']) {
   height: 50px;
-  padding-left: 16px;
-  width: 250px;
-}
-
-textarea {
-  padding-top: 16px;
-  resize: none;
-  height: 250px;
-}
-
-input,
-textarea {
-  border-radius: 20px;
-  border: #888 1px solid;
+  padding: 0 16px;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid rgba(9, 135, 242, 0.2);
   box-sizing: border-box;
-  justify-self: center;
   background-color: var(--background-color);
-  color: var(--form-text-color);
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  transition: var(--transition);
+  position: relative;
+
+  &::placeholder {
+    color: var(--form-text-color);
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(9, 135, 242, 0.1);
+    background: linear-gradient(135deg, 
+      var(--background-color) 0%, 
+      rgba(9, 135, 242, 0.02) 100%);
+  }
+
+  &:hover {
+    border-color: rgba(9, 135, 242, 0.4);
+  }
 }
 
-::placeholder {
-  color: var(--form-text-color);
+textarea {
+  padding: 16px;
+  resize: none;
+  height: 180px;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
 }
 
 input[type='submit'] {
-  background-color: var(--btn-color);
+  background: linear-gradient(135deg, var(--btn-color), #0570d4);
   color: var(--btn-text-color);
   border: none;
-  border-radius: 20px;
-  width: 126px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  margin: auto;
+  border-radius: 12px;
+  width: 150px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  margin: 15px auto 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(9, 135, 242, 0.4);
+    left: 0;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
 }
 
-input[type='submit']:hover {
-  transform: scale(1.05);
-}
+@media (width >= 600px) {
+  textarea,
+  input:not([type='submit']) {
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    padding: 12px 18px;
+    height: 55px;
+  }
 
-input[type='submit']:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  textarea {
+    padding: 18px;
+    height: 200px;
+  }
+
+  form {
+    gap: 30px;
+  }
+
+  input[type='submit'] {
+    width: 180px;
+    height: 50px;
+  }
 }
 
 @media (width >= 800px) {
   textarea,
   input:not([type='submit']) {
-    width: 600px;
-    font-size: 20px;
+    width: 100%;
+    max-width: 600px;
+    font-size: 16px;
   }
+
   form {
-    gap: 40px;
+    gap: 35px;
+    max-width: 700px;
+  }
+
+  textarea {
+    height: 220px;
+  }
+
+  input[type='submit'] {
+    width: 180px;
+    font-size: 16px;
+    height: 55px;
   }
 }
 
 @media (width >= 1400px) {
   textarea,
   input:not([type='submit']) {
-    width: 800px;
+    max-width: 800px;
+  }
+
+  form {
+    max-width: 900px;
   }
 }

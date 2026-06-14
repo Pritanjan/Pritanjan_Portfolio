@@ -17,7 +17,7 @@ function Projects() {
           githubLink="https://github.com/Pritanjan/Freshy"
           h3="Freshy"
           h4="HTML, CSS, JS"
-          p="FRESHY"
+          // p="FRESHY"
         />
         <ProjectCard
           src={weather}
@@ -25,7 +25,7 @@ function Projects() {
           h3="Aura Forecast"
           h4="HTML, CSS, JS"
           githubLink="https://github.com/Pritanjan/Weather/tree/main"
-          p="Weather App"
+          // p="Weather App"
         />
 
         {/*  CHECK */}
@@ -33,9 +33,9 @@ function Projects() {
           src={socialSphere}
           link="https://socialsphere-project.onrender.com/login"
           h3="Social Sphere"
-          githubLink=""
+          githubLink="https://socialsphere-project.onrender.com/login"
           h4="ReactJS , MongoDB, ExpressJS, NodeJS , PostMan , TailWind CSS"
-          p="Social Media App"
+          // p="Social Media App"
         />
 
         {/*  CHECK */}
@@ -46,7 +46,7 @@ function Projects() {
           githubLink="https://github.com/Pritanjan/Tic-Tac-Toe"
           h3="XOXO Grid"
           h4="HTML, CSS, JS"
-          p="Game"
+          // p="Game"
         />
 
         <ProjectCard
@@ -55,7 +55,7 @@ function Projects() {
           githubLink="https://github.com/Pritanjan/Digital-Clock"
           h3="syncclock"
           h4="HTML, CSS, JS"
-          p="Clock App"
+          // p="Clock App"
           //  It shows the digital clock
         />
 
@@ -65,7 +65,7 @@ function Projects() {
           githubLink="https://github.com/Pritanjan/Calc"
           h3="Calculator"
           h4="HTML, CSS, JS"
-          p="Calculator"
+          // p="Calculator"
           // This project is a versatile and user-friendly tool designed to meet your everyday mathematical needs.
         />
 
@@ -75,7 +75,7 @@ function Projects() {
           githubLink="https://github.com/Pritanjan/To-Do-List-1"
           h3="To Do List"
           h4="HTML, CSS, JS"
-          p="MissionMode"
+          // p="MissionMode"
           // It is a simple and efficient task management app designed to help you stay organized and on top of your daily tasks
         />
       </div>
